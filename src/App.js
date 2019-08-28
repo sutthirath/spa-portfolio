@@ -1,14 +1,14 @@
 import React from "react";
 
 import Intro from "./pages/Intro";
-import Links from "./components/Links";
+import SideBar from "./components/SideBar";
 
 class App extends React.Component {
   render() {
     return (
       <div style={styles.container}>
         <Intro />
-        <Links />
+        <SideBar />
       </div>
     );
   }

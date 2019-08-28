@@ -1,39 +1,50 @@
 import React from "react";
+import { Nav, NavItem, NavLink } from "reactstrap";
 
 function Links() {
   return (
     <div style={styles.container}>
-      <a href="" style={styles.link}>
-        Email
-      </a>
-      <a href="https://www.linkedin.com/in/seanvilaysane/" style={styles.link}>
-        LinkedIn
-      </a>
-      <a href="https://github.com/sutthirath" style={styles.link}>
-        Github
-      </a>
-      <a href="" style={styles.link}>
-        Resume
-      </a>
+      <Nav style={styles.nav} horizontal>
+        <NavItem style={styles.item}>
+          <NavLink href="" style={styles.link}>
+            Email
+          </NavLink>
+        </NavItem>
+        <NavItem style={styles.item}>
+          <NavLink
+            href="https://www.linkedin.com/in/seanvilaysane/"
+            style={styles.link}
+          >
+            LinkedIn
+          </NavLink>
+        </NavItem>
+        <NavItem style={styles.item}>
+          <NavLink href="https://github.com/sutthirath" style={styles.link}>
+            Github
+          </NavLink>
+        </NavItem>
+        <NavItem style={styles.item}>
+          <NavLink href="" style={styles.link}>
+            Resume
+          </NavLink>
+        </NavItem>
+      </Nav>
     </div>
   );
 }
 
 const styles = {
-  container: {
+  container: {},
+  nav: {
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "rgba(255, 255, 255, 0.6)",
-    height: "400px",
-    width: "150px",
-    borderTopRightRadius: "30px",
-    borderBottomRightRadius: "30px"
+    listStyleType: "none"
+  },
+  item: {
+    padding: "30px"
   },
   link: {
-    display: "block",
-    padding: "20px"
+    color: "white",
+    textDecoration: "none"
   }
 };
 
