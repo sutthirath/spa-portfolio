@@ -9,7 +9,7 @@ import Resume from "../images/resume.pdf";
 function SideBar() {
   return (
     <div style={styles.container}>
-      <a href="" style={styles.link}>
+      <a href="seanvilaysane@gmail.com" style={styles.link}>
         <img src={Email_Icon} alt="email_icon" />
       </a>
       <a href="https://www.linkedin.com/in/seanvilaysane/" style={styles.link}>
