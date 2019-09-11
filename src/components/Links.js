@@ -12,7 +12,7 @@ function Links() {
     <div style={styles.container}>
       <Nav style={styles.nav} horizontal>
         <NavItem style={styles.item}>
-          <NavLink href="" style={styles.link}>
+          <NavLink href="seanvilaysane@gmail.com" style={styles.link}>
             <img src={Email_Icon} alt="email_icon" />
             Email
           </NavLink>
