@@ -10,16 +10,16 @@ function SideBar() {
   return (
     <div style={styles.container}>
       <a href="seanvilaysane@gmail.com" style={styles.link}>
-        <img src={Email_Icon} alt="email_icon" />
+        <img src={Email_Icon} style={styles.image} alt="email_icon" />
       </a>
       <a href="https://www.linkedin.com/in/seanvilaysane/" style={styles.link}>
-        <img src={LinkedIn_Icon} alt="linkedin_icon" />
+        <img src={LinkedIn_Icon} style={styles.image} alt="linkedin_icon" />
       </a>
       <a href="https://github.com/sutthirath" style={styles.link}>
-        <img src={Github_Icon} alt="github_icon" />
+        <img src={Github_Icon} style={styles.image} alt="github_icon" />
       </a>
       <a href={Resume} download="SutthirathSeanVilaysane" style={styles.link}>
-        <img src={Resume_Icon} alt="resume_icon" />
+        <img src={Resume_Icon} style={styles.image} alt="resume_icon" />
       </a>
     </div>
   );
@@ -33,7 +33,7 @@ const styles = {
     alignItems: "center",
     backgroundColor: "rgba(255, 255, 255, 0.6)",
     height: "400px",
-    width: "150px",
+    width: "125px",
     borderTopRightRadius: "30px",
     borderBottomRightRadius: "30px",
     position: "fixed",
@@ -42,6 +42,9 @@ const styles = {
   link: {
     display: "block",
     textDecoration: "none"
+  },
+  image: {
+    width: "4em"
   }
 };
 

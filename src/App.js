@@ -1,6 +1,9 @@
 import React from "react";
 
 import Intro from "./pages/Intro";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+
 import SideBar from "./components/SideBar";
 
 class App extends React.Component {
@@ -9,6 +12,8 @@ class App extends React.Component {
       <div style={styles.container}>
         <Intro />
         <SideBar />
+        <Projects />
+        <Contact />
       </div>
     );
   }

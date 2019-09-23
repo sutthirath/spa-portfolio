@@ -9,57 +9,71 @@ import Resume from "../images/resume.pdf";
 
 function Links() {
   return (
-    <div style={styles.container}>
-      <Nav style={styles.nav} horizontal>
-        <NavItem style={styles.item}>
-          <NavLink href="seanvilaysane@gmail.com" style={styles.link}>
-            <img src={Email_Icon} alt="email_icon" />
-            Email
-          </NavLink>
-        </NavItem>
-        <NavItem style={styles.item}>
-          <NavLink
-            href="https://www.linkedin.com/in/seanvilaysane/"
-            style={styles.link}
-          >
-            <img src={LinkedIn_Icon} alt="linkedin_icon" />
-            LinkedIn
-          </NavLink>
-        </NavItem>
-        <NavItem style={styles.item}>
-          <NavLink href="https://github.com/sutthirath" style={styles.link}>
-            <img src={Github_Icon} alt="github_icon" />
-            Github
-          </NavLink>
-        </NavItem>
-        <NavItem style={styles.item}>
-          <NavLink
-            href={Resume}
-            download="SutthirathSeanVilaysane"
-            style={styles.link}
-          >
-            <img src={Resume_Icon} alt="resume_icon" />
-            Resume
-          </NavLink>
-        </NavItem>
-      </Nav>
-    </div>
+    <Nav style={styles.nav}>
+      <NavItem style={styles.item}>
+        <NavLink href="seanvilaysane@gmail.com" style={styles.link}>
+          <img src={Email_Icon} style={styles.image} alt="email_icon" />
+          <p style={styles.text}>Email</p>
+        </NavLink>
+      </NavItem>
+      <NavItem style={styles.item}>
+        <NavLink
+          href="https://www.linkedin.com/in/seanvilaysane/"
+          style={styles.link}
+        >
+          <img src={LinkedIn_Icon} style={styles.image} alt="linkedin_icon" />
+          <p style={styles.text}>LinkedIn</p>
+        </NavLink>
+      </NavItem>
+      <NavItem style={styles.item}>
+        <NavLink href="https://github.com/sutthirath" style={styles.link}>
+          <img src={Github_Icon} style={styles.image} alt="github_icon" />
+          <p style={styles.text}>Github</p>
+        </NavLink>
+      </NavItem>
+      <NavItem style={styles.item}>
+        <NavLink
+          href={Resume}
+          download="SutthirathSeanVilaysane"
+          style={styles.link}
+        >
+          <img src={Resume_Icon} style={styles.image} alt="resume_icon" />
+          <p style={styles.text}>Resume</p>
+        </NavLink>
+      </NavItem>
+    </Nav>
   );
 }
 
 const styles = {
-  container: {},
   nav: {
+    width: "20em",
     display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "flex-end",
     listStyleType: "none"
   },
   item: {
-    padding: "30px"
+    margin: "0",
+    padding: "0"
   },
   link: {
-    display: "block",
+    textDecoration: "none",
+    textAlign: "center"
+  },
+  image: {
+    margin: "0",
+    padding: "0",
+    filter: "invert(1)",
+    width: "4em"
+  },
+  text: {
+    margin: "0",
+    padding: "0",
     color: "white",
-    textDecoration: "none"
+    fontSize: "1em",
+    fontFamily: "Nunito Sans, sans-serif"
   }
 };
 
