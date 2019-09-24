@@ -52,6 +52,7 @@ function Form() {
 
 const styles = {
   container: {
+    margin: "10em 0",
     width: "35em",
     height: "18em",
     display: "flex",

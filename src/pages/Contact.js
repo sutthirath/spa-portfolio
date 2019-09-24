@@ -1,6 +1,7 @@
 import React from "react";
 
 import Form from "../components/Form";
+import Seattle from "../components/ArtSeattle";
 
 import trees from "../images/trees.svg";
 
@@ -9,6 +10,7 @@ class Contact extends React.Component {
     return (
       <div style={styles.container}>
         <Form />
+        <Seattle />
       </div>
     );
   }
@@ -16,12 +18,14 @@ class Contact extends React.Component {
 
 const styles = {
   container: {
-    width: "100vw",
-    height: "30vh",
+    width: "100%",
+    height: "100%",
     background: `url(${trees})`,
     backgroundRepeat: "space",
     display: "flex",
-    justifyContent: "center"
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "center"
   }
 };
 
