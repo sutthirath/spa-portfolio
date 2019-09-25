@@ -1,6 +1,6 @@
 import React from "react";
 
-import seattle from "../images/seattle.svg";
+import seattle from "../../images/seattle.svg";
 
 function Seattle() {
   return (

@@ -73,7 +73,7 @@ const styles = {
     border: "none",
     borderRadius: "30px 30px 0 0",
     color: "white",
-    fontFamily: "Nunito Sans, sans-serif"
+    fontFamily: "Nunito, sans-serif"
   },
   email: {
     width: "90%",
@@ -82,7 +82,7 @@ const styles = {
     backgroundColor: "rgba(0,0,0,0.3)",
     border: "none",
     color: "white",
-    fontFamily: "Nunito Sans, sans-serif"
+    fontFamily: "Nunito, sans-serif"
   },
   message: {
     width: "90%",
@@ -93,7 +93,7 @@ const styles = {
     borderRadius: "0 0 30px 30px",
     resize: "none",
     color: "white",
-    fontFamily: "Nunito Sans, sans-serif"
+    fontFamily: "Nunito, sans-serif"
   },
   button: {
     margin: "0",

@@ -1,7 +1,7 @@
 import React from "react";
 
 import Form from "../components/Form";
-import Seattle from "../components/ArtSeattle";
+import Seattle from "../components/art/Seattle";
 
 import trees from "../images/trees.svg";
 
