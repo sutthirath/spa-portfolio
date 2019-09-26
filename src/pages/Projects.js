@@ -1,6 +1,7 @@
 import React from "react";
 
 import Yocal from "../components/projects/Yocal";
+import SeattleTransit from "../components/projects/SeattleTransit";
 
 import rain from "../images/rain.svg";
 
@@ -9,6 +10,7 @@ class Projects extends React.Component {
     return (
       <div style={styles.container}>
         <Yocal />
+        <SeattleTransit />
       </div>
     );
   }
