@@ -33,7 +33,7 @@ const styles = {
     alignItems: "center",
     backgroundColor: "rgba(255, 255, 255, 0.6)",
     height: "400px",
-    width: "125px",
+    width: "100px",
     borderTopRightRadius: "30px",
     borderBottomRightRadius: "30px",
     position: "fixed",

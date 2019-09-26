@@ -112,7 +112,8 @@ const styles = {
     filter: "invert(1)"
   },
   text: {
-    fontSize: "2em"
+    fontSize: "2em",
+    margin: ".3em"
   }
 };
 
