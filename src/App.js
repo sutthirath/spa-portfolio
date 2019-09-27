@@ -5,6 +5,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
 import SideBar from "./components/SideBar";
+import Rainier from "./components/art/Rainier";
 
 class App extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
         <Intro />
         <SideBar />
         <Projects />
+        <Rainier />
         <Contact />
       </div>
     );

@@ -1,19 +1,19 @@
 import React from "react";
 
-import yocal1 from "../../images/yocal1.png";
+import buginvaders1 from "../../images/buginvaders1.png";
 
 function BugInvaders() {
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Yocal</h1>
+      <h1 style={styles.title}>BugInvaders</h1>
       <div style={styles.images}>
-        <img src={yocal1} style={styles.image} alt="yocal logo" />
+        <img src={buginvaders1} style={styles.image} alt="buginvaders logo" />
         <img
-          src={yocal1}
+          src={buginvaders1}
           style={{ ...styles.image, ...styles.gif }}
-          alt="yocal logo"
+          alt="buginvaders logo"
         />
-        <img src={yocal1} style={styles.image} alt="yocal logo" />
+        <img src={buginvaders1} style={styles.image} alt="buginvaders logo" />
       </div>
       <div style={styles.detail}>
         <p>
@@ -75,6 +75,7 @@ const styles = {
   images: {
     gridArea: "images",
     display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center"
   },
@@ -91,14 +92,14 @@ const styles = {
     textAlign: "left"
   },
   image: {
-    maxWidth: "8em",
+    maxHeight: "8em",
     borderRadius: "10px",
     margin: "0 1px"
   },
   gif: {
-    border: "3px solid rgba(255,255,255,.9)",
-    borderLeft: "1px solid rgba(255,255,255,.9)",
-    borderRight: "1px solid rgba(255,255,255,.9)"
+    border: "1px solid rgba(255,255,255,.9)",
+    borderLeft: "3px solid rgba(255,255,255,.9)",
+    borderRight: "3px solid rgba(255,255,255,.9)"
   },
   listContainer: {
     display: "flex",
