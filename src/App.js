@@ -1,20 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Intro from "./pages/Intro";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
 import SideBar from "./components/SideBar";
-import Rainier from "./components/art/Rainier";
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div style={styles.container}>
-        <Intro />
         <SideBar />
+        <Intro />
         <Projects />
-        <Rainier />
         <Contact />
       </div>
     );
@@ -22,7 +20,10 @@ class App extends React.Component {
 }
 
 const styles = {
-  container: {}
+  container: {
+    margin: "0",
+    padding: "0"
+  }
 };
 
 export default App;

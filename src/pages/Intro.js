@@ -1,10 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 
 import Links from "../components/Links";
+import Clouds from "../components/art/Clouds";
+
 import stars from "../images/stars.svg";
 
-class Intro extends React.Component {
+class Intro extends Component {
   render() {
     return (
       <div style={styles.container}>
@@ -14,6 +16,13 @@ class Intro extends React.Component {
           </NavbarBrand>
           <Links className="ml-auto" />
         </Navbar>
+        <div style={styles.textContainer}>
+          <p style={styles.text}>
+            "I'm Sean, a Full Stack Developer in the Seattle area, thank you for
+            visiting!"
+          </p>
+        </div>
+        <Clouds />
       </div>
     );
   }
@@ -21,7 +30,9 @@ class Intro extends React.Component {
 
 const styles = {
   container: {
-    height: "30vh",
+    margin: "0",
+    padding: "0",
+    width: "100%",
     background: `url(${stars})`,
     backgroundRepeat: "space"
   },
@@ -34,6 +45,21 @@ const styles = {
     fontFamily: "damion",
     fontSize: "5em",
     textDecoration: "none"
+  },
+  textContainer: {
+    margin: "0",
+    padding: "0",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center"
+  },
+  text: {
+    fontFamily: "damion",
+    fontSize: "3em",
+    maxWidth: "40%",
+    marginBottom: "0"
   }
 };
 

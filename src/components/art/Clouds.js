@@ -1,11 +1,11 @@
 import React from "react";
 
-import seattle from "../../images/seattle.svg";
+import cloud from "../../images/clouds.svg";
 
-function Seattle() {
+function Clouds() {
   return (
     <div style={styles.container}>
-      <img src={seattle} style={styles.image} alt="Seattle Skyline" />
+      <img src={cloud} style={styles.image} alt="clouds and Sean" />
     </div>
   );
 }
@@ -25,4 +25,4 @@ const styles = {
   }
 };
 
-export default Seattle;
+export default Clouds;
