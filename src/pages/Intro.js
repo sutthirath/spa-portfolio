@@ -14,7 +14,10 @@ class Intro extends Component {
           <NavbarBrand href="/" style={styles.brand}>
             Sean Vilaysane
           </NavbarBrand>
-          <Links className="ml-auto" />
+          <Links
+            className="ml-auto"
+            scrollToBottom={this.props.scrollToBottom}
+          />
         </Navbar>
         <div style={styles.textContainer}>
           <p style={styles.text}>

@@ -7,11 +7,11 @@ import Github_Icon from "../images/github_icon.svg";
 import Resume_Icon from "../images/resume_icon.svg";
 import Resume from "../images/resume.pdf";
 
-function Links() {
+function Links(props) {
   return (
     <Nav style={styles.nav}>
       <NavItem style={styles.item}>
-        <NavLink href="seanvilaysane@gmail.com" style={styles.link}>
+        <NavLink onClick={() => props.scrollToBottom()} style={styles.link}>
           <img src={Email_Icon} style={styles.image} alt="email_icon" />
           <p style={styles.text}>Email</p>
         </NavLink>

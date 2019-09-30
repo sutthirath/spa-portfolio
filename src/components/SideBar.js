@@ -6,13 +6,27 @@ import Github_Icon from "../images/github_icon.svg";
 import Resume_Icon from "../images/resume_icon.svg";
 import Resume from "../images/resume.pdf";
 
-function SideBar() {
+function SideBar(props) {
   return (
-    <div style={styles.container}>
+    <div
+      style={{
+        margin: "0",
+        padding: "0",
+        width: "100px",
+        height: "100%",
+        display: props.sBar,
+        alignItems: "center",
+        position: "fixed",
+        zIndex: "10"
+      }}
+    >
       <div style={styles.linkContainer}>
-        <a href="seanvilaysane@gmail.com" style={styles.link}>
+        <button
+          onClick={() => props.scrollToBottom()}
+          style={{ ...styles.link, ...styles.button }}
+        >
           <img src={Email_Icon} style={styles.image} alt="email_icon" />
-        </a>
+        </button>
         <a
           href="https://www.linkedin.com/in/seanvilaysane/"
           style={styles.link}
@@ -31,16 +45,6 @@ function SideBar() {
 }
 
 const styles = {
-  container: {
-    margin: "0",
-    padding: "0",
-    width: "100px",
-    height: "100%",
-    display: "flex",
-    alignItems: "center",
-    position: "fixed",
-    zIndex: "10"
-  },
   linkContainer: {
     display: "flex",
     flexDirection: "column",
@@ -51,6 +55,15 @@ const styles = {
     width: "100%",
     borderTopRightRadius: "30px",
     borderBottomRightRadius: "30px"
+  },
+  button: {
+    background: "none",
+    color: "inherit",
+    border: "none",
+    padding: "0",
+    font: "inherit",
+    cursor: "pointer",
+    outline: "inherit"
   },
   link: {
     display: "block",
