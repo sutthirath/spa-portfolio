@@ -44,11 +44,12 @@ function SeattleTransit() {
           <ul style={styles.list}>
             <li>• Node.js</li>
             <li>• Express.js</li>
-            <li>• React.js</li>
+            <li>• E.js</li>
             <li>• MaterializeCSS</li>
           </ul>
           <ul style={styles.list}>
-            <li>• Foursquare API</li>
+            <li>• OneBusAway API</li>
+            <li>• Mapbox API</li>
             <li>• Heroku</li>
           </ul>
         </div>

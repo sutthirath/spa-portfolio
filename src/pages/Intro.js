@@ -41,7 +41,8 @@ const styles = {
   },
   nav: {
     display: "flex",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    alignItems: "flex-start"
   },
   brand: {
     color: "white",

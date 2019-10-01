@@ -9,7 +9,6 @@ function Form() {
       style={styles.container}
       method="post"
       name="portfolio-msg"
-      action="/success"
       data-netlify="true"
       netlify-honeypot="bot-field"
     >
@@ -20,7 +19,7 @@ function Form() {
       </label>
       <input
         className="contact-input"
-        style={styles.name}
+        style={{ ...styles.name, ...styles.input }}
         type="text"
         name="name"
         placeholder="Name"
@@ -28,7 +27,7 @@ function Form() {
       />
       <input
         className="contact-input"
-        style={styles.email}
+        style={{ ...styles.email, ...styles.input }}
         type="email"
         name="email"
         placeholder="Email"
@@ -36,7 +35,7 @@ function Form() {
       />
       <textarea
         className="contact-textarea"
-        style={styles.message}
+        style={{ ...styles.message, ...styles.input }}
         placeholder="Send me a message"
         name="message"
         required
@@ -65,35 +64,26 @@ const styles = {
   bot: {
     display: "none"
   },
-  name: {
+  input: {
     width: "90%",
     backgroundColor: "rgba(0,0,0,0.3)",
-    marginTop: "2em",
     padding: "1em",
     border: "none",
-    borderRadius: "30px 30px 0 0",
     color: "white",
     fontFamily: "Nunito, sans-serif"
+  },
+  name: {
+    marginTop: "2em",
+    borderRadius: "20px 20px 4px 4px"
   },
   email: {
-    width: "90%",
     margin: ".5em 0",
-    padding: "1em",
-    backgroundColor: "rgba(0,0,0,0.3)",
-    border: "none",
-    color: "white",
-    fontFamily: "Nunito, sans-serif"
+    borderRadius: "4px"
   },
   message: {
-    width: "90%",
     height: "60%",
-    padding: "1em",
-    backgroundColor: "rgba(0,0,0,0.3)",
-    border: "none",
-    borderRadius: "0 0 30px 30px",
-    resize: "none",
-    color: "white",
-    fontFamily: "Nunito, sans-serif"
+    borderRadius: "4px 4px 20px 20px",
+    resize: "none"
   },
   button: {
     margin: "0",

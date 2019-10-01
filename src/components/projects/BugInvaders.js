@@ -31,17 +31,7 @@ function BugInvaders() {
             <li>• HTML</li>
             <li>• CSS</li>
             <li>• JavaScript</li>
-            <li>• REST</li>
-          </ul>
-          <ul style={styles.list}>
-            <li>• Node.js</li>
-            <li>• Express.js</li>
-            <li>• React.js</li>
-            <li>• MaterializeCSS</li>
-          </ul>
-          <ul style={styles.list}>
-            <li>• Foursquare API</li>
-            <li>• Heroku</li>
+            <li>• GitHub Pages</li>
           </ul>
         </div>
       </div>
