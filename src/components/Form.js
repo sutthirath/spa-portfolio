@@ -58,7 +58,7 @@ const styles = {
     flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.6)",
+    backgroundColor: "rgba(200,200,200)",
     borderRadius: "30px"
   },
   bot: {

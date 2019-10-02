@@ -5,7 +5,7 @@ import buginvaders1 from "../../images/buginvaders1.png";
 function BugInvaders() {
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>BugInvaders</h1>
+      <h1 style={styles.title}>Bug Invaders</h1>
       <div style={styles.images}>
         <img src={buginvaders1} style={styles.image} alt="buginvaders logo" />
         <img
@@ -17,11 +17,9 @@ function BugInvaders() {
       </div>
       <div style={styles.detail}>
         <p>
-          A traveling and social app for adventurers. Explore new lands and meet
-          locals who know where to find the good stuff. Search Places of
-          interest get user submitted photos and reviews with the Foursquare
-          API. Real-time chat with local experts who love to share their
-          expertise and make new friends.
+          Lightweight web browser game that is built with intuitive javascript.
+          No extra libraries or frameworks involved. Delivering a simple but
+          enjoyable experience.
         </p>
       </div>
       <div style={styles.tech}>
@@ -36,11 +34,27 @@ function BugInvaders() {
         </div>
       </div>
       <div style={styles.links}>
-        <button style={styles.button}>Source Code</button>
-        <button style={styles.button}>View App</button>
+        <button
+          style={styles.button}
+          type="button"
+          onClick={() => link("https://github.com/sutthirath/BugInvaders")}
+        >
+          Source Code
+        </button>
+        <button
+          style={styles.button}
+          type="button"
+          onClick={() => link("https://sutthirath.github.io/BugInvaders/")}
+        >
+          View App
+        </button>
       </div>
     </div>
   );
+}
+
+function link(url) {
+  return window.open(url);
 }
 
 const styles = {
@@ -71,7 +85,8 @@ const styles = {
   },
   detail: {
     gridArea: "detail",
-    textAlign: "left"
+    textAlign: "left",
+    maxWidth: "80%"
   },
   tech: {
     gridArea: "tech",

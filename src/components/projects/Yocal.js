@@ -46,17 +46,34 @@ function Yocal() {
         </div>
       </div>
       <div style={styles.links}>
-        <button style={styles.button}>Source Code</button>
-        <button style={styles.button}>View App</button>
+        <button
+          style={styles.button}
+          type="button"
+          onClick={() => link("https://github.com/sutthirath/yocal")}
+        >
+          Source Code
+        </button>
+        <button
+          style={styles.button}
+          type="button"
+          onClick={() => link("https://yocal.herokuapp.com/")}
+        >
+          View App
+        </button>
       </div>
     </div>
   );
+}
+
+function link(url) {
+  return window.open(url);
 }
 
 const styles = {
   container: {
     margin: "0",
     padding: "0",
+    paddingTop: "4em",
     width: "100%",
     display: "grid",
     gridTemplateRows: "auto",
@@ -80,7 +97,8 @@ const styles = {
   },
   detail: {
     gridArea: "detail",
-    textAlign: "left"
+    textAlign: "left",
+    maxWidth: "80%"
   },
   tech: {
     gridArea: "tech",

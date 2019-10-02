@@ -5,7 +5,7 @@ import seattletransit1 from "../../images/seattletransit1.png";
 function SeattleTransit() {
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>SeattleTransit</h1>
+      <h1 style={styles.title}>Seattle Transit</h1>
       <div style={styles.images}>
         <img
           src={seattletransit1}
@@ -25,11 +25,10 @@ function SeattleTransit() {
       </div>
       <div style={styles.detail}>
         <p>
-          A traveling and social app for adventurers. Explore new lands and meet
-          locals who know where to find the good stuff. Search Places of
-          interest get user submitted photos and reviews with the Foursquare
-          API. Real-time chat with local experts who love to share their
-          expertise and make new friends.
+          An interactive public transit app for the Seattle, WA area. Created
+          with the OneBusAway API but designed with the collaboration of Sean
+          Vilaysane, Henry Hong, and Chris Tack. Easy to navigate interface with
+          a beautiful visualization of local transit data.
         </p>
       </div>
       <div style={styles.tech}>
@@ -55,11 +54,27 @@ function SeattleTransit() {
         </div>
       </div>
       <div style={styles.links}>
-        <button style={styles.button}>Source Code</button>
-        <button style={styles.button}>View App</button>
+        <button
+          style={styles.button}
+          type="button"
+          onClick={() => link("https://github.com/sutthirath/SeattleTransit")}
+        >
+          Source Code
+        </button>
+        <button
+          style={styles.button}
+          type="button"
+          onClick={() => link("https://nameless-harbor-37613.herokuapp.com/")}
+        >
+          View App
+        </button>
       </div>
     </div>
   );
+}
+
+function link(url) {
+  return window.open(url);
 }
 
 const styles = {
@@ -89,7 +104,8 @@ const styles = {
   },
   detail: {
     gridArea: "detail",
-    textAlign: "left"
+    textAlign: "left",
+    maxWidth: "80%"
   },
   tech: {
     gridArea: "tech",
