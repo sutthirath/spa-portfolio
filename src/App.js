@@ -11,13 +11,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sBar: "none"
-      // vWidth: 0
+      sBar: "none",
+      vWidth: 0
     };
   }
 
-  /* Make component that finds view width on load */
-  // watchWidth = () => {}
+  /* Need to update this function to check if resize change */
+  watchWidth = width => {
+    return this.setState({
+      vWidth: width
+    });
+  };
 
   handleScroll = () => {
     if (window.scrollY >= 120) {
@@ -37,22 +41,36 @@ class App extends Component {
   };
 
   componentDidMount() {
+    const width = window.innerWidth;
+    this.watchWidth(width);
     window.addEventListener("scroll", this.handleScroll, { passive: true });
+    console.log(`Height: ${window.innerHeight}, Width: ${window.innerWidth}`);
   }
 
   render() {
-    // Pass vWidth to each page
-    const { sBar } = this.state;
+    const { sBar, vWidth } = this.state;
     const stb = this.scrollToBottom;
-    return (
-      <div style={styles.container}>
-        <SideBar sBar={sBar} scrollToBottom={stb} />
-        <MobileLinks scrollToBottom={stb} />
-        <Intro scrollToBottom={stb} />
-        <Projects />
-        <Contact />
-      </div>
-    );
+    if (vWidth > 0 && vWidth <= 800) {
+      // Mobile View
+      return (
+        <div style={styles.container}>
+          <Intro scrollToBottom={stb} />
+          <Projects />
+          <Contact />
+          <MobileLinks scrollToBottom={stb} />
+        </div>
+      );
+    } else {
+      // Desktop View
+      return (
+        <div style={styles.container}>
+          <SideBar sBar={sBar} scrollToBottom={stb} />
+          <Intro scrollToBottom={stb} />
+          <Projects />
+          <Contact />
+        </div>
+      );
+    }
   }
 }
 

@@ -39,9 +39,11 @@ function MobileLinks(props) {
 
 const styles = {
   container: {
+    position: "sticky",
     zIndex: "10",
     width: "100%",
-    backgroundColor: "rgba(255,255,255,.7)"
+    backgroundColor: "rgba(255,255,255,.7)",
+    bottom: "0vh"
   },
   linkContainer: {
     display: "flex",
