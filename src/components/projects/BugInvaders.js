@@ -2,7 +2,11 @@ import React from "react";
 
 import buginvaders1 from "../../images/buginvaders1.png";
 
-function BugInvaders() {
+function BugInvaders({ mobile }) {
+  let styles = desktopStyles;
+  if (mobile) {
+    styles = mobileStyles;
+  }
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Bug Invaders</h1>
@@ -16,7 +20,7 @@ function BugInvaders() {
         <img src={buginvaders1} style={styles.image} alt="buginvaders logo" />
       </div>
       <div style={styles.detail}>
-        <p>
+        <p style={styles.text}>
           Lightweight web browser game that is built with intuitive javascript.
           No extra libraries or frameworks involved. Delivering a simple but
           enjoyable experience.
@@ -57,7 +61,7 @@ function link(url) {
   return window.open(url);
 }
 
-const styles = {
+const desktopStyles = {
   container: {
     margin: "0",
     padding: "0",
@@ -108,7 +112,7 @@ const styles = {
   },
   listContainer: {
     display: "flex",
-    flexDireaction: "row",
+    flexDirection: "row",
     justifyContent: "start"
   },
   list: {
@@ -118,6 +122,83 @@ const styles = {
   },
   listOne: {
     paddingLeft: "0"
+  },
+  button: {
+    fontFamily: "Damion",
+    fontSize: "16px",
+    color: "white",
+    backgroundColor: "transparent",
+    border: "2px solid white",
+    borderRadius: "5px",
+    margin: "20px 10px 5em 0"
+  }
+};
+
+const mobileStyles = {
+  container: {
+    margin: "0",
+    padding: "0",
+    paddingTop: "2em",
+    width: "100%",
+    display: "grid",
+    gridTemplateRows: "auto",
+    gridTemplateColumns: "auto",
+    gridTemplateAreas: `
+    "title"
+    "images"
+    "detail"
+    "tech"
+    "links"
+    `,
+    textAlign: "center"
+  },
+  title: {
+    gridArea: "title"
+  },
+  images: {
+    gridArea: "images",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  detail: {
+    gridArea: "detail",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center"
+  },
+  text: {
+    maxWidth: "90%",
+    textAlign: "left"
+  },
+  tech: {
+    gridArea: "tech",
+    textAlign: "center"
+  },
+  links: {
+    gridArea: "links",
+    textAlign: "center"
+  },
+  image: {
+    maxWidth: "6em",
+    borderRadius: "10px",
+    margin: "0 1px"
+  },
+  gif: {
+    border: "1px solid rgba(255,255,255,.9)",
+    borderLeft: "3px solid rgba(255,255,255,.9)",
+    borderRight: "3px solid rgba(255,255,255,.9)"
+  },
+  listContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around"
+  },
+  list: {
+    listStyleType: "none",
+    textAlign: "left",
+    margin: "0",
+    padding: "0"
   },
   button: {
     fontFamily: "Damion",

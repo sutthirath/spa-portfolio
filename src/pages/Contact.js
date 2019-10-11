@@ -7,9 +7,10 @@ import trees from "../images/trees.svg";
 
 class Contact extends React.Component {
   render() {
+    const { mobile } = this.props;
     return (
       <div style={styles.container}>
-        <Form />
+        <Form mobile={mobile} />
         <Seattle />
       </div>
     );
@@ -21,7 +22,7 @@ const styles = {
     width: "100%",
     height: "100%",
     background: `url(${trees})`,
-    backgroundRepeat: "space",
+    backgroundRepeat: "repeat",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",

@@ -15,22 +15,22 @@ function MobileLinks(props) {
           style={{ ...styles.link, ...styles.button }}
         >
           <img src={Email_Icon} style={styles.image} alt="email_icon" />
-          <p>Email</p>
+          <p style={styles.label}>Email</p>
         </button>
         <a
           href="https://www.linkedin.com/in/seanvilaysane/"
           style={styles.link}
         >
           <img src={LinkedIn_Icon} style={styles.image} alt="linkedin_icon" />
-          <p>LinkedIn</p>
+          <p style={styles.label}>LinkedIn</p>
         </a>
         <a href="https://github.com/sutthirath" style={styles.link}>
           <img src={Github_Icon} style={styles.image} alt="github_icon" />
-          <p>Github</p>
+          <p style={styles.label}>Github</p>
         </a>
         <a href={Resume} download="SutthirathSeanVilaysane" style={styles.link}>
           <img src={Resume_Icon} style={styles.image} alt="resume_icon" />
-          <p>Resume</p>
+          <p style={styles.label}>Resume</p>
         </a>
       </div>
     </div>
@@ -42,6 +42,7 @@ const styles = {
     position: "sticky",
     zIndex: "10",
     width: "100%",
+    height: "auto",
     backgroundColor: "rgba(255,255,255,.7)",
     bottom: "0vh"
   },
@@ -49,7 +50,7 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "flex-end"
   },
   button: {
     background: "none",
@@ -61,11 +62,19 @@ const styles = {
     outline: "inherit"
   },
   link: {
-    display: "block",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
     textDecoration: "none"
   },
   image: {
     width: "2em"
+  },
+  label: {
+    margin: "0",
+    padding: "0",
+    color: "black"
   }
 };
 

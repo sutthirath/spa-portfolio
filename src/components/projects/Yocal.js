@@ -2,7 +2,11 @@ import React from "react";
 
 import yocal1 from "../../images/yocal1.png";
 
-function Yocal() {
+function Yocal({ mobile }) {
+  let styles = desktopStyles;
+  if (mobile) {
+    styles = mobileStyles;
+  }
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Yocal</h1>
@@ -16,7 +20,7 @@ function Yocal() {
         <img src={yocal1} style={styles.image} alt="yocal logo" />
       </div>
       <div style={styles.detail}>
-        <p>
+        <p style={styles.text}>
           A traveling and social app for adventurers. Explore new lands and meet
           locals who know where to find the good stuff. Search Places of
           interest get user submitted photos and reviews with the Foursquare
@@ -69,7 +73,7 @@ function link(url) {
   return window.open(url);
 }
 
-const styles = {
+const desktopStyles = {
   container: {
     margin: "0",
     padding: "0",
@@ -120,7 +124,7 @@ const styles = {
   },
   listContainer: {
     display: "flex",
-    flexDireaction: "row",
+    flexDirection: "row",
     justifyContent: "start"
   },
   list: {
@@ -130,6 +134,83 @@ const styles = {
   },
   listOne: {
     paddingLeft: "0"
+  },
+  button: {
+    fontFamily: "Damion",
+    fontSize: "16px",
+    color: "white",
+    backgroundColor: "transparent",
+    border: "2px solid white",
+    borderRadius: "5px",
+    margin: "20px 10px 5em 0"
+  }
+};
+
+const mobileStyles = {
+  container: {
+    margin: "0",
+    padding: "0",
+    paddingTop: "2em",
+    width: "100%",
+    display: "grid",
+    gridTemplateRows: "auto",
+    gridTemplateColumns: "auto",
+    gridTemplateAreas: `
+    "title"
+    "images"
+    "detail"
+    "tech"
+    "links"
+    `,
+    textAlign: "center"
+  },
+  title: {
+    gridArea: "title"
+  },
+  images: {
+    gridArea: "images",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  detail: {
+    gridArea: "detail",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center"
+  },
+  text: {
+    maxWidth: "90%",
+    textAlign: "left"
+  },
+  tech: {
+    gridArea: "tech",
+    textAlign: "center"
+  },
+  links: {
+    gridArea: "links",
+    textAlign: "center"
+  },
+  image: {
+    maxWidth: "6em",
+    borderRadius: "10px",
+    margin: "0 1px"
+  },
+  gif: {
+    border: "3px solid rgba(255,255,255,.9)",
+    borderLeft: "1px solid rgba(255,255,255,.9)",
+    borderRight: "1px solid rgba(255,255,255,.9)"
+  },
+  listContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around"
+  },
+  list: {
+    listStyleType: "none",
+    textAlign: "left",
+    margin: "0",
+    padding: "0"
   },
   button: {
     fontFamily: "Damion",

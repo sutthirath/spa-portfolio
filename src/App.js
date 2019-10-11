@@ -44,7 +44,6 @@ class App extends Component {
     const width = window.innerWidth;
     this.watchWidth(width);
     window.addEventListener("scroll", this.handleScroll, { passive: true });
-    console.log(`Height: ${window.innerHeight}, Width: ${window.innerWidth}`);
   }
 
   render() {
@@ -54,9 +53,9 @@ class App extends Component {
       // Mobile View
       return (
         <div style={styles.container}>
-          <Intro scrollToBottom={stb} />
-          <Projects />
-          <Contact />
+          <Intro scrollToBottom={stb} mobile={true} />
+          <Projects mobile={true} />
+          <Contact mobile={true} />
           <MobileLinks scrollToBottom={stb} />
         </div>
       );

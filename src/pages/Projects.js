@@ -9,12 +9,13 @@ import rain from "../images/rain.svg";
 
 class Projects extends Component {
   render() {
+    const { mobile } = this.props;
     return (
       <div style={styles.container}>
-        <Yocal />
-        <SeattleTransit />
-        <BugInvaders />
-        <Rainier />
+        <Yocal mobile={mobile} />
+        <SeattleTransit mobile={mobile} />
+        <BugInvaders mobile={mobile} />
+        <Rainier mobile={mobile} />
       </div>
     );
   }
@@ -26,7 +27,7 @@ const styles = {
     padding: "0",
     width: "100%",
     background: `url(${rain})`,
-    backgroundRepeat: "space"
+    backgroundRepeat: "repeat"
   }
 };
 

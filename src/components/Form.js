@@ -2,7 +2,11 @@ import React from "react";
 
 import Email_Icon from "../images/email_icon.svg";
 
-function Form() {
+function Form({ mobile }) {
+  let styles = desktopStyles;
+  if (mobile) {
+    styles = mobileStyles;
+  }
   return (
     <form
       className="contact-form"
@@ -49,10 +53,68 @@ function Form() {
   );
 }
 
-const styles = {
+const desktopStyles = {
   container: {
     margin: "10em 0",
     width: "35em",
+    height: "18em",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around",
+    alignItems: "center",
+    backgroundColor: "rgba(200,200,200)",
+    borderRadius: "30px"
+  },
+  bot: {
+    display: "none"
+  },
+  input: {
+    width: "90%",
+    backgroundColor: "rgba(0,0,0,0.3)",
+    padding: "1em",
+    border: "none",
+    color: "white",
+    fontFamily: "Nunito, sans-serif"
+  },
+  name: {
+    marginTop: "2em",
+    borderRadius: "20px 20px 4px 4px"
+  },
+  email: {
+    margin: ".5em 0",
+    borderRadius: "4px"
+  },
+  message: {
+    height: "60%",
+    borderRadius: "4px 4px 20px 20px",
+    resize: "none"
+  },
+  button: {
+    margin: "0",
+    padding: "0",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    fontFamily: "damion",
+    background: "none",
+    border: "none",
+    color: "white"
+  },
+  image: {
+    width: "2em",
+    filter: "invert(1)"
+  },
+  text: {
+    fontSize: "2em",
+    margin: ".3em"
+  }
+};
+
+const mobileStyles = {
+  container: {
+    margin: "10em 0",
+    width: "90%",
     height: "18em",
     display: "flex",
     flexDirection: "column",

@@ -1,5 +1,4 @@
 import React from "react";
-import { Nav, NavItem, NavLink } from "reactstrap";
 
 import Email_Icon from "../images/email_icon.svg";
 import LinkedIn_Icon from "../images/linkedin_icon.svg";
@@ -9,54 +8,51 @@ import Resume from "../images/resume.pdf";
 
 function Links(props) {
   return (
-    <Nav style={styles.nav}>
-      <NavItem style={styles.item}>
-        <NavLink onClick={() => props.scrollToBottom()} style={styles.link}>
+    <nav style={styles.nav}>
+      <ul style={styles.item}>
+        <li onClick={() => props.scrollToBottom()} style={styles.link}>
           <img src={Email_Icon} style={styles.image} alt="email_icon" />
           <p style={styles.text}>Email</p>
-        </NavLink>
-      </NavItem>
-      <NavItem style={styles.item}>
-        <NavLink
+        </li>
+        <li
           href="https://www.linkedin.com/in/seanvilaysane/"
           style={styles.link}
         >
           <img src={LinkedIn_Icon} style={styles.image} alt="linkedin_icon" />
           <p style={styles.text}>LinkedIn</p>
-        </NavLink>
-      </NavItem>
-      <NavItem style={styles.item}>
-        <NavLink href="https://github.com/sutthirath" style={styles.link}>
+        </li>
+        <li href="https://github.com/sutthirath" style={styles.link}>
           <img src={Github_Icon} style={styles.image} alt="github_icon" />
           <p style={styles.text}>Github</p>
-        </NavLink>
-      </NavItem>
-      <NavItem style={styles.item}>
-        <NavLink
+        </li>
+        <li
           href={Resume}
           download="SutthirathSeanVilaysane"
           style={styles.link}
         >
           <img src={Resume_Icon} style={styles.image} alt="resume_icon" />
           <p style={styles.text}>Resume</p>
-        </NavLink>
-      </NavItem>
-    </Nav>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
 const styles = {
   nav: {
     width: "20em",
+    margin: "0",
+    padding: "0"
+  },
+  item: {
+    width: "100%",
+    margin: "0",
+    padding: "0",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "flex-end",
     listStyleType: "none"
-  },
-  item: {
-    margin: "0",
-    padding: "0"
   },
   link: {
     textDecoration: "none",

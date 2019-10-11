@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Navbar, NavbarBrand } from "reactstrap";
 
 import Links from "../components/Links";
 import Clouds from "../components/art/Clouds";
@@ -8,26 +7,43 @@ import stars from "../images/stars.svg";
 
 class Intro extends Component {
   render() {
-    return (
-      <div style={styles.container}>
-        <Navbar style={styles.nav}>
-          <NavbarBrand href="/" style={styles.brand}>
-            Sean Vilaysane
-          </NavbarBrand>
-          <Links
-            className="ml-auto"
-            scrollToBottom={this.props.scrollToBottom}
-          />
-        </Navbar>
-        <div style={styles.textContainer}>
-          <p style={styles.text}>
-            "I'm Sean, a Full Stack Developer in the Seattle area, thank you for
-            visiting!"
-          </p>
+    const { mobile, scrollToBottom } = this.props;
+    if (mobile) {
+      return (
+        <div style={styles.container}>
+          <div style={mobileStyles.nav}>
+            <h1 href="/" style={mobileStyles.brand}>
+              Sean Vilaysane
+            </h1>
+          </div>
+          <div style={styles.textContainer}>
+            <p style={mobileStyles.text}>
+              "I'm Sean, a Full Stack Developer in the Seattle area, thank you
+              for visiting!"
+            </p>
+          </div>
+          <Clouds />
         </div>
-        <Clouds />
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div style={styles.container}>
+          <div style={styles.nav}>
+            <h1 href="/" style={styles.brand}>
+              Sean Vilaysane
+            </h1>
+            <Links scrollToBottom={scrollToBottom} />
+          </div>
+          <div style={styles.textContainer}>
+            <p style={styles.text}>
+              "I'm Sean, a Full Stack Developer in the Seattle area, thank you
+              for visiting!"
+            </p>
+          </div>
+          <Clouds />
+        </div>
+      );
+    }
   }
 }
 
@@ -37,7 +53,7 @@ const styles = {
     padding: "0",
     width: "100%",
     background: `url(${stars})`,
-    backgroundRepeat: "space"
+    backgroundRepeat: "repeat"
   },
   nav: {
     display: "flex",
@@ -48,7 +64,9 @@ const styles = {
     color: "white",
     fontFamily: "damion",
     fontSize: "5em",
-    textDecoration: "none"
+    textDecoration: "none",
+    margin: "0",
+    padding: "0"
   },
   textContainer: {
     margin: "0",
@@ -63,6 +81,28 @@ const styles = {
     fontFamily: "damion",
     fontSize: "3em",
     maxWidth: "40%",
+    marginBottom: "0"
+  }
+};
+
+const mobileStyles = {
+  brand: {
+    color: "white",
+    fontFamily: "damion",
+    fontSize: "3em",
+    textDecoration: "none",
+    margin: "0",
+    padding: "0"
+  },
+  nav: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start"
+  },
+  text: {
+    fontFamily: "damion",
+    fontSize: "1.8em",
+    maxWidth: "90%",
     marginBottom: "0"
   }
 };
