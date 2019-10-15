@@ -22,7 +22,7 @@ class Intro extends Component {
               for visiting!"
             </p>
           </div>
-          <Clouds />
+          <Clouds mobile={mobile} />
         </div>
       );
     } else {
@@ -92,6 +92,7 @@ const mobileStyles = {
     fontSize: "3em",
     textDecoration: "none",
     margin: "0",
+    marginTop: ".5em",
     padding: "0"
   },
   nav: {
@@ -103,7 +104,7 @@ const mobileStyles = {
     fontFamily: "damion",
     fontSize: "1.8em",
     maxWidth: "90%",
-    marginBottom: "0"
+    margin: "5em 0"
   }
 };
 

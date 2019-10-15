@@ -43,20 +43,20 @@ const desktopStyles = {
     position: "absolute"
   },
   peak: {
-    zIndex: "1"
+    zIndex: "0"
   },
   mid: {
-    zIndex: "2"
+    zIndex: "1"
   },
   base: {
-    zIndex: "3"
+    zIndex: "2"
   }
 };
 
 const mobileStyles = {
   container: {
     width: "100%",
-    height: "8em",
+    height: "11em",
     display: "flex",
     alignItems: "flex-end"
   },
@@ -66,13 +66,13 @@ const mobileStyles = {
     position: "absolute"
   },
   peak: {
-    zIndex: "1"
+    zIndex: "0"
   },
   mid: {
-    zIndex: "2"
+    zIndex: "1"
   },
   base: {
-    zIndex: "3"
+    zIndex: "2"
   }
 };
 

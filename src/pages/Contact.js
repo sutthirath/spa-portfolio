@@ -11,7 +11,7 @@ class Contact extends React.Component {
     return (
       <div style={styles.container}>
         <Form mobile={mobile} />
-        <Seattle />
+        <Seattle mobile={mobile} />
       </div>
     );
   }
