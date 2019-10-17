@@ -16,7 +16,6 @@ class App extends Component {
     };
   }
 
-  /* Need to update this function to check if resize change */
   watchWidth = width => {
     return this.setState({
       vWidth: width
@@ -44,6 +43,15 @@ class App extends Component {
     const width = window.innerWidth;
     this.watchWidth(width);
     window.addEventListener("scroll", this.handleScroll, { passive: true });
+  }
+
+  componentDidUpdate() {
+    const width = window.innerWidth;
+    window.addEventListener("resize", () => {
+      if (this.state.vWidth !== width) {
+        this.watchWidth(width);
+      }
+    });
   }
 
   render() {

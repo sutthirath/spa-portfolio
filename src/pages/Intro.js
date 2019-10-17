@@ -18,8 +18,11 @@ class Intro extends Component {
           </div>
           <div style={styles.textContainer}>
             <p style={mobileStyles.text}>
-              "I'm Sean, a Full Stack Developer in the Seattle area, thank you
-              for visiting!"
+              I'm Sean, a Full Stack Developer in the Seattle area.
+            </p>
+            <p style={mobileStyles.text}>
+              I enjoy cerating delightful user experiences and making complex
+              systems not so complex.
             </p>
           </div>
           <Clouds mobile={mobile} />
@@ -36,8 +39,11 @@ class Intro extends Component {
           </div>
           <div style={styles.textContainer}>
             <p style={styles.text}>
-              "I'm Sean, a Full Stack Developer in the Seattle area, thank you
-              for visiting!"
+              I'm Sean, a Full Stack Developer in the Seattle area.
+            </p>
+            <p style={styles.text}>
+              I enjoy cerating delightful user experiences and making complex
+              systems not so complex.
             </p>
           </div>
           <Clouds />
@@ -69,19 +75,20 @@ const styles = {
     padding: "0"
   },
   textContainer: {
-    margin: "0",
+    margin: "6em 0",
     padding: "0",
     width: "100%",
     display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center"
   },
   text: {
     fontFamily: "damion",
-    fontSize: "3em",
-    maxWidth: "40%",
-    marginBottom: "0"
+    fontSize: "2em",
+    maxWidth: "60%",
+    margin: "0"
   }
 };
 
@@ -104,7 +111,8 @@ const mobileStyles = {
     fontFamily: "damion",
     fontSize: "1.8em",
     maxWidth: "90%",
-    margin: "5em 0"
+    margin: "0",
+    padding: "0"
   }
 };
 
