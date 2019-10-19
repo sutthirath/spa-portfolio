@@ -6,6 +6,19 @@ body {
   font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rebeccapurple;
+  background: -webkit-linear-gradient(
+    #3c0c72,
+    #521392,
+    #70147a,
+    #7d1361,
+    #891774,
+    #a01855,
+    #ae1b5a,
+    #be1d41,
+    #c53b40,
+    #c43d3e
+  );
   background: linear-gradient(
     #3c0c72,
     #521392,
