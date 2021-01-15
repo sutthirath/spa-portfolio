@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import Intro from "./pages/Intro";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
+// import Projects from "./pages/Projects";
+// import Contact from "./pages/Contact";
 
 import SideBar from "./components/SideBar";
 import MobileLinks from "./components/MobileLinks";
@@ -12,24 +12,24 @@ class App extends Component {
     super(props);
     this.state = {
       sBar: "none",
-      vWidth: 0
+      vWidth: 0,
     };
   }
 
-  watchWidth = width => {
+  watchWidth = (width) => {
     return this.setState({
-      vWidth: width
+      vWidth: width,
     });
   };
 
   handleScroll = () => {
     if (window.scrollY >= 120) {
       return this.setState({
-        sBar: "flex"
+        sBar: "flex",
       });
     } else if (window.scrollY < 120) {
       return this.setState({
-        sBar: "none"
+        sBar: "none",
       });
     }
   };
@@ -62,8 +62,11 @@ class App extends Component {
       return (
         <div style={styles.container}>
           <Intro scrollToBottom={stb} mobile={true} />
-          <Projects mobile={true} />
-          <Contact mobile={true} />
+          {
+            // Jan 14, 2021 - I disabled these pages until I'm ready for my next opportunity
+            /* <Projects mobile={true} />
+            <Contact mobile={true} /> */
+          }
           <MobileLinks scrollToBottom={stb} />
         </div>
       );
@@ -73,8 +76,11 @@ class App extends Component {
         <div style={styles.container}>
           <SideBar sBar={sBar} scrollToBottom={stb} />
           <Intro scrollToBottom={stb} />
-          <Projects />
-          <Contact />
+          {
+            // Jan 14, 2021 - I disabled these pages until I'm ready for my next opportunity
+            /* <Projects />
+            <Contact /> */
+          }
         </div>
       );
     }
@@ -85,8 +91,8 @@ const styles = {
   container: {
     margin: "0",
     padding: "0",
-    width: "100%"
-  }
+    width: "100%",
+  },
 };
 
 export default App;
