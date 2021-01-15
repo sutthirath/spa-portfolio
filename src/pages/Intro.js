@@ -68,6 +68,7 @@ const styles = {
     width: "100%",
     background: `url(${stars})`,
     backgroundRepeat: "repeat",
+    backgroundAttachment: "fixed",
   },
   nav: {
     display: "flex",
